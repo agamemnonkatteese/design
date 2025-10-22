@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dionysos Studio — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b0e10;--ink:#e7ecef;--muted:#9aa6ad;--accent:#c0f1e7;--gold:#d0b570;--max:1200px}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    img{display:block;width:100%;height:100%}
+
+    .wrap{max-width:var(--max);margin:0 auto;padding:24px}
+    header{position:sticky;top:0;background:rgba(11,14,16,.75);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08);z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{font-family:"Playfair Display",serif;font-weight:700;letter-spacing:.5px}
+    .menu{display:flex;gap:22px;text-transform:uppercase;font-size:12px;letter-spacing:2px}
+
+    /* Landing */
+    .hero{display:grid;place-items:center;text-align:center;padding:96px 24px 72px;background:radial-gradient(1200px 500px at 50% -10%, rgba(208,181,112,.12), transparent 60%)}
+    .kicker{color:var(--muted);text-transform:uppercase;letter-spacing:3px;font-size:12px}
+    h1,h2{font-family:"Playfair Display",serif;margin:0 0 10px}
+    h1{font-size:56px;line-height:1.05}
+    .lead{color:#c7d2d8;max-width:70ch;margin:0 auto 26px}
+    .cta{display:inline-flex;gap:10px;align-items:center;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:12px 16px}
+    .cta:hover{border-color:rgba(255,255,255,.35)}
+
+    /* Section */
+    section{padding:60px 0;border-top:1px solid rgba(255,255,255,.06)}
+    p.sub{color:#c7d2d8;max-width:70ch;margin:0 0 26px}
+
+    /* Uniform thumbnails — shrink-to-fit */
+    .gallery{display:grid;gap:16px;grid-template-columns:repeat(12,1fr)}
+    .tile{grid-column:span 6;aspect-ratio:16/10;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0));display:grid;place-items:center}
+    .tile.wide{grid-column:1/-1}
+    .tile img{object-fit:contain; /* never crops; shrinks to fit */
+              max-height:100%;max-width:100%;}
+    @media (max-width: 900px){.tile{grid-column:1/-1}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">Dionysos Studio</div>
+      <nav class="menu">
+        <a href="#work">Work</a>
+        <a href="#dionysos">Dionysos</a>
+        <a href="#filothei">Filothei</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- LANDING like Ivory -->
+  <section class="hero" id="work">
+    <div class="wrap" style="text-align:center">
+      <div class="kicker">Interior & Architectural Concepts</div>
+      <h1>Spaces for Ritual & Joy</h1>
+      <p class="lead">Modern, moody, material‑driven interiors. Selected works below — Dionysos Villa & Filothei Residence — with room to grow.</p>
+      <a class="cta" href="#dionysos">View Projects ↓</a>
+    </div>
+  </section>
+
+  <!-- DIONYSOS FEATURE -->
+  <section id="dionysos">
+    <div class="wrap">
+      <h2>Dionysos Villa</h2>
+      <p class="sub">A modern sanctuary on the Athenian hills. Deep charcoal seating, mint‑washed light and brushed brass accents frame views across pine‑covered slopes toward the city basin. Oak, leather, terrazzo and graphite stone compose a tactile rhythm.</p>
+
+      <div class="gallery">
+        <figure class="tile wide"><img src="images/dionysos-1.png" alt="Dionysos living room view of Athens"></figure>
+        <figure class="tile"><img src="images/dionysos-2.png" alt="Dionysos terrazzo bathroom with mint tiles"></figure>
+        <figure class="tile"><img src="images/dionysos-3.png" alt="Dionysos green brick bath with red tub"></figure>
+        <figure class="tile"><img src="images/dionysos-4.png" alt="Dionysos vignette with sculptural lamp and sideboard"></figure>
+        <figure class="tile"><img src="images/dionysos-5.png" alt="Dionysos modern kitchen with brass pendants"></figure>
+        <figure class="tile wide"><img src="images/dionysos-6.png" alt="Dionysos kitchen detail"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILOTHEI FEATURE -->
+  <section id="filothei">
+    <div class="wrap">
+      <h2>Filothei Residence</h2>
+      <p class="sub">In the leafy northern suburb of Athens, Filothei Residence embraces Mediterranean ease. Pale limestone, olive‑leaf greens and matte black steel interplay with daylight, shaping calm and elegant interiors for family life and hospitality.</p>
+
+      <div class="gallery">
+        <figure class="tile wide"><img src="images/filothei-1.png" alt="Filothei living area with natural light"></figure>
+        <figure class="tile"><img src="images/filothei-2.png" alt="Filothei kitchen with oak cabinetry"></figure>
+        <figure class="tile"><img src="images/filothei-3.png" alt="Filothei bathroom in light stone palette"></figure>
+        <figure class="tile"><img src="images/filothei-4.png" alt="Filothei terrace and garden view"></figure>
+        <figure class="tile"><img src="images/filothei-5.png" alt="Filothei bedroom minimal interior"></figure>
+        <figure class="tile wide"><img src="images/filothei-6.png" alt="Filothei hallway detail with art"></figure>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
